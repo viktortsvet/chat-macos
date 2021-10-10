@@ -1,0 +1,117 @@
+.nomad_list {
+    height: 100%;
+    background-color: rgba(1, 1, 1, .75);
+    padding: 36px 24px 16px 22px;
+    &__header-content > div {
+        display: grid;
+        grid-template: 24px / 101.5px 11.5px;
+        align-items: center;
+        column-gap: 5px;
+    }
+
+    &__wrapper {
+        height: 750px;
+    }
+
+    &__header-content {
+        @include setBasicGrid(space-between, center);
+        grid-template-columns: 118px 16px;
+    }
+
+    &-header {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $white;
+    }
+
+    &__treads {
+        display: grid;
+        grid-template-columns: 18px 59px;
+        column-gap: 11px;
+        margin-top: 30px;
+        span {
+            color: $main-gray;
+            font-weight: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    &__channels {
+        margin-top: 30.5px;
+    }
+
+    &__title {
+        display: grid;
+        grid-template: 15px / minmax(50px, max-content) 14px;
+        justify-content: space-between;
+        span {
+            display: block;
+            @include setFont(700, 12px, 14px, $second-gray);
+            text-transform: uppercase;
+        }
+    }
+
+    &__channels-list {
+        margin-top: 14px;
+        list-style-type: none;
+        display: grid;
+        grid-template-rows: 30px;
+        grid-auto-rows: 30px;
+    }
+
+    &-channel {
+        padding: 4px 0 9px 13px;
+        cursor: pointer;
+        border-radius: 6px;
+        &:hover {
+            color: $white;
+            background-color: rgba(255, 255, 255, .2);
+        }
+    }
+
+    &__friends {
+        margin-top: 8px;
+        height: 289px;
+    }
+
+    &__friend-list {
+        list-style-type: none;
+        margin-top: 22.5px;
+        display: grid;
+        grid-template-rows: repeat(6, 32px);
+        grid-auto-rows: 32px;
+        height: 252px;
+        align-content: space-between;
+    }
+
+    &__friend {
+        > div {
+            @include setBasicGrid(unset, center);
+            grid-template-columns: 32px minmax(40px, auto);
+            column-gap: 13px;
+            padding-left: 15px;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 100px;
+                width: 8px;
+                height: 7.5px;
+                border-radius: 100%;
+                background-color: #666666;
+            }
+        }
+    }
+}
+
+.list-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $main-gray;
+}

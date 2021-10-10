@@ -1,0 +1,211 @@
+.general {
+    display: grid;
+    grid-template-rows: 79px 1px 645px 71px 1px;
+
+    &__header {
+        padding: 31.5px 23.5px 14.5px 23.5px;
+        @include setBasicGrid(space-between, center);
+        grid-template-columns: 100px 382px;
+    }
+
+    &__dots {
+        display: grid;
+        grid-template: repeat(3, 4px) / 4px;
+        align-content: space-between;
+        height: 16.5px;
+        span {
+            display: block;
+            background: rgba(0, 0, 0, .24);
+            border-radius: 100%;
+        }
+    }
+
+    &__bell {
+        > div {
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                width: 5px;
+                height: 5px;
+                background-color: $red;
+                border-radius: 100%;
+                position: absolute;
+                left: 12px;
+                top: 0;
+            }
+        }
+    }
+
+    &__name {
+        span {
+            @include setFont(700, 20px, 24px, $black);
+        }
+    }
+
+    &__items {
+        @include setBasicGrid(space-between, center);
+        grid-template-columns: 52px 241px 14.5px 4.5px;
+    }
+
+    &__persons-length {
+        @include setBasicGrid(space-between, center);
+        grid-template-columns: 10.5px 35.5px;
+    }
+
+    &__search-block {
+        width: 241px;
+        height: 33px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 9px;
+            right: 15.5px;
+            cursor: pointer;
+        }
+    }
+
+
+    &__search-input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0.5px solid rgba(126, 70, 70, 0.24);
+        padding: 8px 35.5px 8px 8.5px;
+    }
+
+    &__main-line {
+        width: 100%;
+        height: 1px;
+        background: rgba(0, 0, 0, .24);
+        border: none;
+    }
+
+    &__messages {
+        padding: 0 23px;
+        overflow-y: scroll;
+        border-top: none;
+    }
+
+    &__messages::-webkit-scrollbar {
+        width: 7px;
+        background-color: #ffffff;
+    }
+    &__messages::-webkit-scrollbar-thumb {
+        height: 206px;
+        background-color: rgba(0, 0, 0, .2);
+        border-radius: 6px;
+        &:hover {
+            background-color: rgba(157,157,157);
+        }
+    }
+
+    &__message-block {
+        padding: 19px 11.5px 18px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .16);
+        position: relative;
+        display: grid;
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        row-gap: 10px;
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__message-block-label {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 48.5px;
+        padding: 0 8px;
+        background-color: #ffffff;
+        span {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            color: #8D8D8D;
+        }
+    }
+
+    &__user-message {
+        @include setBasicGrid(unset, unset);
+        grid-template-columns: 32px auto;
+        column-gap: 12px;
+    }
+
+    &__user-data {
+        display: grid;
+        grid-template-columns: minmax(min-content, max-content) 53px;
+        column-gap: 7.5px;
+        max-width: 168px;
+    }
+
+    &__user {
+        @include setFont(700, 12px, 14px, $black);
+        max-width: 89px;
+        min-width: 59.5px
+    }
+
+    &__time {
+        @include setFont(400, 12px, 14px, #8D8D8D);
+        max-width: 53.5px;
+    }
+
+    &__message {
+        margin-top: 2.2px;
+        @include setFont(400, 13px, 20px, $black);
+        img {
+            margin-top: 10px;
+        }
+    }
+
+    &__textarea {
+        height: 72px;
+        position: relative;
+        textarea {
+            position: absolute;
+            overflow: auto;
+            resize: none;
+            height: 100%;
+            width: 100%;
+            padding: 26px 64px 28px 91px;
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, .16);
+            @include setFont(400, 14px, 17px, #8D8D8D);
+        }
+    }
+    &__clip {
+        position: absolute;
+        top: 24px;
+        left: 23px;
+    }
+    &__micro {
+        position: absolute;
+        top: 24px;
+        left: 50px;
+    }
+
+    &__smile {
+        position: absolute;
+        top: 25px;
+        right: 24px;
+    }
+}
+
+.general-label {
+    @include setFont(400, 14px, 17px, #A4A4A4);
+}
+
+
+// .general__messages::-webkit-scrollbar {
+//     width: 7px;
+//     background-color: #ffffff;
+// }
+
+// .general__messages::-webkit-scrollbar-thumb {
+//     height: 206px;
+//     background-color: rgba(0, 0, 0, .2);
+//     border-radius: 6px;
+// }
