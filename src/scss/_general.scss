@@ -82,18 +82,19 @@
     }
 
     &__messages {
-        padding: 0 23px;
+        padding: 0 10px 0 23px;
         overflow-y: scroll;
         border-top: none;
     }
 
     &__messages::-webkit-scrollbar {
-        width: 7px;
-        background-color: #ffffff;
+        width: 13px;
+        // background-color: #ffffff;
     }
     &__messages::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, .2);
         border-radius: 6px;
+        border: 4px solid #ffffff;
         &:hover {
             background-color: rgba(157,157,157);
         }
