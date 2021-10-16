@@ -1,7 +1,7 @@
 .nomad_list {
     height: 100%;
     background-color: rgba(1, 1, 1, .75);
-    padding: 36px 24px 16px 22px;
+    padding: 36px 7px 16px 22px;
     &__header-content > div {
         display: grid;
         grid-template: 24px / 101.5px 11.5px;
@@ -11,6 +11,17 @@
 
     &__wrapper {
         height: 750px;
+        overflow-y: scroll;
+        padding-right: 10px;
+    }
+
+    &__wrapper::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    &__wrapper::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, .2);
+        border-radius: 6px;
     }
 
     &__header-content {
@@ -83,11 +94,27 @@
         display: grid;
         grid-template-rows: repeat(6, 32px);
         grid-auto-rows: 32px;
-        height: 252px;
-        align-content: space-between;
+        row-gap: 12px;
     }
 
     &__friend {
+
+        &:first-child {
+            > div {
+                &:before {
+                    background-color: $green;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            > div {
+                &:before {
+                    background-color: $green;
+                }
+            }
+        }
+
         > div {
             @include setBasicGrid(unset, center);
             grid-template-columns: 32px minmax(40px, auto);
