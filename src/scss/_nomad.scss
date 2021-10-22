@@ -1,6 +1,6 @@
 .nomad_list {
     height: 100%;
-    background-color: rgba(1, 1, 1, .75);
+    background: linear-gradient(to bottom, #545354, #4F4E4F, #37393F, #2A3038, #232830, #242930, #202123);
     padding: 36px 7px 16px 22px;
     &__header-content > div {
         display: grid;

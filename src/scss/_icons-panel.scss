@@ -1,6 +1,7 @@
 .icons-panel {
     padding: 10.5px 10px 15.5px 9.5px;
-    background-color: black;
+    background: linear-gradient(to bottom, #403F3E, #43413F, #171B21, #0E141B, #090E16, #080B11, #040507);
+    mix-blend-mode: normal;
     height: 100%;
     &__small-circles {
         @include setBasicGrid(space-between, center);
